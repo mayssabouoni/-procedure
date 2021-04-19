@@ -4,16 +4,16 @@ VAR
 BEGIN
     scalaire:=0;
     FOR(i=0 ; i<vector1.length ; i++)
-    scalaire:= vector1[i]*vector2[i]
+    scalaire:= scalaire + vector1[i]*vector2[i]
     END_FOR
     write(scalaire)
  
- FOR (i=0;i<vectors.length;i++) 
-   IF (scalaire (vector1[i], vector2[i])=0) THEN
-       vector1[i] and vector2[i] are orthogonal
+ 
+   IF (scalaire =0) THEN
+      " vector1 and vector2 are orthogonal" 
    END_IF
    write(orthogonal)
- END_FOR
+
 
 
 END
@@ -24,6 +24,15 @@ VAR
 BEGIN
     scalaire:=0;
     for(let i = 0; i < vector1.length; i++){
-        scalaire:= vector1[i]*vector2[i]
+        scalaire:= scalaire + vector1[i]*vector2[i]
     RETURN scalaire ;
+
+  
+   IF (scalaire =0) THEN
+      " vector1 and vector2 are orthogonal"
+       RETURN orthogonal
+   END_IF
+ END_FOR
+
+
 END
